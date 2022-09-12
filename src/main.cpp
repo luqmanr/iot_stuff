@@ -11,7 +11,8 @@
 
 const char* ssid = "INSAN-AP";
 const char* password = "kenapa tanya?";
-const int pinGpio = 2 ;
+const int ledPin = 2;
+const int cmdPin = 5; // D1
 
 // Create an instance of the server
 // specify the port to listen on as an argument
@@ -21,9 +22,11 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // prepare GPIO2
-  pinMode(pinGpio, OUTPUT);
-  digitalWrite(pinGpio, 0);
+  // prepare Pins
+  pinMode(ledPin, OUTPUT);
+  pinMode(cmdPin, OUTPUT);
+  digitalWrite(ledPin, 1);
+  digitalWrite(cmdPin, 1);
   
   // Connect to WiFi network
   Serial.println();
@@ -79,7 +82,8 @@ void loop() {
   }
 
   // Set GPIO2 according to the request
-  digitalWrite(pinGpio, val);
+  digitalWrite(ledPin, val);
+  digitalWrite(cmdPin, val);
   
   client.flush();
 
