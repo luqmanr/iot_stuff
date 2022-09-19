@@ -9,8 +9,8 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid = "INSAN-AP";
-const char* password = "kenapa tanya?";
+const char* ssid = "ssid";
+const char* password = "passs";
 const int ledPin = 2;
 const int cmdPin = 5; // D1
 
