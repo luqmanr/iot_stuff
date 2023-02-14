@@ -13,8 +13,8 @@
 // #define triggerPin  D8
 // #define echoPin     D7
 
-const int triggerPin = 15;
-const int echoPin = 13;
+const int triggerPin = 15; // D8
+const int echoPin = 13;    // D7
 
 //define sound velocity in cm/uS
 #define SOUND_VELOCITY 0.034
